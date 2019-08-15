@@ -12,6 +12,8 @@ A Spirited game depends primarily on the making decision speed in order to avoid
      - app.js: where all the game objects and the relation among them are located.
      - engine.js: where the game loop which is required for repeated execution is located
      - resources.js: which is used to cache all the used image for more performance improvment
+
+## Screenshots of the game
          
 ##### the "main modal"
  ![main modal](images/mainModal.png)
