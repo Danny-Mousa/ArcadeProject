@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Classic Arcade Game Clone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div class="container" >
+		<div class="content-centered">
+			<h1 id="header">Are you READY ??  - Ok ..</h1>
+			<p id="main-parag">- Select one of them <img src="images/players.png" alt="players picture"> to be your player.<br><br>
+				- Be careful of (moving) rocks & bugs <img src="images/enemies.png" alt="enemies photo">.<br><br>
+				- Select all the gems <img src="images/items.png" alt="gems photo">.<br><br>
+				- Be sure to end up on the water (REQUIRED) <img src="images/river.png" alt="river photo">  after collecting the gems <img src="images/items.png" alt="gems photo"> in order to win.<br><br>
+				<span><img src="images/luck.png" alt="star photo"> GOOD LUCK <img src="images/luck.png" alt="star photo"></span>
+		    </p>
+		    <form class="menu" id="menuForm">
+				<div class="label-parent">
+					<label>
+						<img src="images/char-boy.png" alt="char boy photo">
+						<input type="radio" name="player" id="char-boy" checked>
+					</label>
+				</div>
+				<div class="label-parent">
+					<label>
+						<img src="images/char-cat-girl.png" alt="char cat girl photo">
+						<input type="radio" name="player" id="char-cat-girl">
+					</label>
+				</div>
+				<div class="label-parent">
+					<label>
+						<img src="images/char-horn-girl.png" alt="char horn girl photo">
+						<input type="radio" name="player" id="char-horn-girl">
+					</label>
+				</div>
+				<div class="label-parent">
+					<label>
+						<img src="images/char-pink-girl.png" alt="char pink girl photo">
+						<input type="radio" name="player" id="char-pink-girl">
+					</label>
+				</div>
+				<div class="label-parent">
+					<label>
+						<img src="images/char-princess-girl.png" alt="char princess girl photo">
+						<input type="radio" name="player" id="char-princess-girl">
+					</label>
+				</div>
+			
+			</form>
+			<button type="button" id="start-game"> Start Game </button>
+		</div>
+	</div>
+	<div class="overlayBackground hide">
+		<div class="overlayReceiver"></div>
+	</div>
+    <div id="canvas">
+    	<div id="score-panel">
+	    	<div id="lives"></div>
+	    	<div id="points"></div>
+	    	<div id="timer">0 mins 0 secs</div>
+    	</div>
+    	<div id="canvas-board"></div>
+    </div>
+    <button type="button" id="resetCan">Reset Game</button>
+    <button type="button" id="play-pause">Pause</button>
+    <button type="button" id="changePlayer" tabindex="0">Change Player</button>
+    <script src="js/resources.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/engine.js"></script>
+    
+</body>
+</html>

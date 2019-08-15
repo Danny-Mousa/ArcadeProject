@@ -1,0 +1,411 @@
+*{
+	box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    background-image: url("../images/water.jpg");
+	height: 950px;
+}
+
+.hide{
+	display: none;
+}
+
+.container{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	
+	color: white;
+
+}
+
+.content-centered{
+	padding-top: 5px;
+	margin-top: 30px;
+	width: 700px;
+	height: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 24px;
+	background-color: rgba(0, 0, 255, 0.9);
+	border-radius: 15px;
+}
+
+
+
+#main-parag{
+	text-align: left;
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#main-parag img{
+	vertical-align: middle;
+}
+
+#main-parag span{
+	display: block;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+form{
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.label-parent{
+	width: 101px;
+	background-color: rgba(115, 115, 115, 0.9);
+	border-radius: 5px;
+
+}
+label{
+ 	cursor: pointer;
+ }
+.menu .label-parent:hover{
+	background-color: rgba(77, 77, 77, 0.9);
+	cursor: pointer;
+}
+
+#play-pause,
+#changePlayer,
+#resetCan,
+#ovBtn,
+.label-parent input:hover{
+	cursor: pointer;
+}
+
+#play-pause,
+#changePlayer,
+#resetCan,
+#ovBtn,
+button#start-game{
+	width: 110px;
+	height: 30px;
+    border: none;
+    border-radius: 5px;
+	margin-top: 50px;
+	margin-bottom: 30px;
+	background-color: rgba(0, 0, 255, 0.6);
+	color: #fff;
+	box-shadow: 1px 1px 8px 3px rgba(255,255,255,0.4);
+	animation-name: startGame;
+	animation-iteration-count: infinite;
+	animation-duration: 5s;
+}
+
+@keyframes startGame{
+	
+	0%{ color: rgba(255,255,255,0.9);
+		background-color: rgba(0, 0, 255, 1); 
+	   }
+
+	50%{ color: rgba(0, 0, 255, 1) ;
+		background-color: rgba(255,255,255,0.9);
+	  }
+
+	100%{ color: rgba(255,255,255,0.9);
+		background-color: rgba(0, 0, 255, 1); 
+	   }     
+}
+
+#play-pause:hover,
+#changePlayer:hover,
+#resetCan:hover,
+#ovBtn:hover,
+button#start-game:hover{
+	background-color: rgba(0, 0, 255, 0.7);
+	box-shadow: 0 0 8px 3px  rgba(255,255,255,0.8);
+	cursor: pointer;
+	animation: none;
+}
+
+
+/*********** STYLES FOR CANVAS ************/
+
+
+
+#canvas{
+	outline: 0;
+	width: 505px;
+	margin-left: auto;
+	margin-right: auto;
+	color:#000000;
+	font-size: 26px;
+	font-family: 'Fjalla One', sans-serif;
+}
+
+
+#score-panel{
+	display: flex;
+	justify-content: space-around;
+	height: 50px;
+	width: 450px;
+	margin-right: auto;
+	margin-left: auto;
+    align-items: center;
+    background-color: #cccccc;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+#points{
+	margin-left: -45px;
+}
+
+#canvas-board{
+	height: 500px;
+    margin-top: -50px;
+}
+
+/************* STYLES FOR overlayReceiver *********/
+
+.overlayBackground{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(115, 115, 115, 0.9); 
+}
+
+.overlayReceiver{
+	padding-top: 1px;
+	color: black;
+	font-size: 24px;
+	width : 500px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 70px;
+	height: 500px;
+	background-color: rgba(0, 0, 255, 0.9);
+	color: #fff;
+	border-radius: 15px;
+
+}
+
+#playerImage img{
+	margin-top: -50px;
+}
+
+button#ovBtn{
+	margin-top: 45px;
+}
+
+#scores{
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+#time{
+	margin-top: 25px;
+}
+
+#resetCan{
+	position: relative;
+	top: 40px;
+	left: -43px;
+}
+
+#changePlayer{
+	position: relative;
+	top: 40px;
+	right: -43px;
+}
+
+#play-pause{
+	position: relative;
+	top: 40px;
+}
+
+/************ MEDIA QUERIES DEVICES ***********/
+@media screen  and (max-width: 700px){
+
+	body{
+		background-image: url("../images/wate2.jpg");
+	}
+	
+	canvas{
+		width: 450px;
+		margin-left: auto;
+		margin-right: auto
+		
+	}
+
+	#score-panel{
+		width: 400px;
+		font-size: 23px;
+	}
+
+	/*** STYLES FOR WIN/LOSE MODALS ***/
+	div.overlayReceiver{
+		width: 450px;
+		height: 450px;
+	}
+
+	.content-centered h1,
+	div.overlayReceiver h1{
+		font-size: 35px;
+	}
+
+	div.overlayReceiver h2{
+		font-size: 32px;
+	}
+	
+	.container{
+		right: 0;
+	}
+
+	.content-centered{
+		
+		width: 500px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#main-parag {
+	    text-align: left;
+	    width: 450px;
+	    margin-left: auto;
+	    margin-right: auto;
+	    font-size: 20px;
+	}
+
+	.label-parent img{
+		width: 100%;
+		height: auto;
+
+	}
+
+	.label-parent{
+		margin-right: 5px;
+	}
+
+	#resetCan,
+	#play-pause,
+	#changePlayer{
+		top:-20px;
+		left:10px;
+		margin-left: 20px;
+	}
+}
+
+
+
+@media screen  and (max-width: 499px){
+
+	body{
+		background-image: url("../images/wate2.jpg");
+	}
+	
+	canvas{
+		width: 350px;
+		margin-left: auto;
+		margin-right: auto
+		
+	}
+
+	#canvas{
+		width: 350px;
+	}
+
+	#score-panel {
+		margin-bottom: 15px;
+		width: 300px;
+		font-size: 20px;
+	}
+
+	#points {
+	    margin-left: -20px;
+	}
+
+	/*** STYLES FOR WIN/LOSE MODALS ***/
+	div.overlayReceiver{
+		width: 350px;
+		height: 350px;
+	}
+
+	.content-centered h1,
+	div.overlayReceiver h1{
+		font-size: 33px;
+	}
+
+	div.overlayReceiver h2{
+		font-size: 30px;
+	}
+
+	button#ovBtn {
+        margin-top: 10px;
+    }
+	
+	.container{
+		right: 0;
+	}
+
+	.content-centered{
+		
+		width: 360px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#main-parag {
+	    text-align: left;
+	    width: 350px;
+	    margin-left: auto;
+	    margin-right: auto;
+	    font-size: 16px;
+	}
+
+	.label-parent img{
+		width: 100%;
+		height: auto;
+
+	}
+
+	.label-parent{
+		margin-right: 5px;
+	}
+
+	#resetCan,
+	#changePlayer{
+		width: 85px;
+        height: 48px;
+        top: -145px;
+	}
+
+	#play-pause{
+		top: -136px;
+		width: 70px;
+        height: 48px;
+	}
+
+	#play-pause,
+	#changePlayer,
+	#resetCan,
+	#ovBtn,
+	button#start-game:hover{
+		background-color: rgba(0, 0, 255, 0.7);
+		box-shadow: 0 0 8px 3px  rgba(255,255,255,0.8);
+		cursor: pointer;
+		animation: none;
+	}
+
+	.menu .label-parent:hover{
+		background-color: rgba(77, 77, 77, 0.9);
+	}
+
+}
