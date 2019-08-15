@@ -5,8 +5,8 @@ A Spirited game depends primarily on the making decision speed in order to avoid
 
 ## How to start:
    - This game is hosted on github pages and do not need any previous installations.
-   - To run the game directly, please click [here]().
-   - For developers: the game repository is [here]().
+   - To run the game directly, please click [here](https://danny-mousa.github.io/arcadeProject/).
+   - For developers: the game repository is [here](https://github.com/Danny-Mousa/arcadeProject).
    - This game consists of index.html, style.css, app.js, engine.js, and resources.js
    - all the functionality comes from the .js files, where:
      - app.js: where all the game objects and the relation among them are located.
@@ -27,7 +27,7 @@ A Spirited game depends primarily on the making decision speed in order to avoid
  
 ## Game Rule:
 >The gameplay rule is very simple: collect your gems, save your lives, and reach the water area with as many lives as possible from the total lives of three
-![gems photo](images/items.png)
+
 ## Instructions :
    - Select one of them  ![players picture](images/players.png)  to be your player.
   - Be careful of  moving rocks & bugs ![enemies photo](images/enemies.png).
